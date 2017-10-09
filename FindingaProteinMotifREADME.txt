@@ -8,7 +8,8 @@ are printed out alongside the ID of the protein. This program works
 out this process step-by-step but it is important to note all three
 loops can be consolidated into one loop. I split it into three parts
 to make it easier to follow. The time complexity would therefore
-technically be O(3n) which is of course still treated as O(n).
+technically be O(3n) which is of course still treated as O(n) since
+the runtime of the algorithm still only increases linearly with n.
 However, the program still runs rather slowly, since retrieving
 sequences from UniProt with this method does not seem to be very
 efficient.
