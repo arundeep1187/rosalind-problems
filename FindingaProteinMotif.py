@@ -14,7 +14,7 @@ while currentID != '':
     currentID = currentID.replace('\n','')
     idList.append(currentID)
 
-#note: inefficient method for retrieving sequences
+#compile sequence list
 sequenceList = []
 for i in range(0,len(idList)):
     h = ExPASy.get_sprot_raw(idList[i])
@@ -36,6 +36,7 @@ for i in range(0,len(idList)):
 
     motifList.append(subMotifList)
 
+#print motif locations and IDs
 for i in range(0,len(idList)):
     if len(motifList[i]) > 0:
         print(idList[i])

@@ -30,20 +30,16 @@ for i in range(1,n+1):
         minEdges = minEdges + 1
     degreeList[i-1] = degrees
 
-#print(disconnectedNodes)
-#print(degreeList)
+
 iLoc= [p for p, check in enumerate(degreeList) if check >= 2]
 internalNodes = np.array(iLoc)+1
 
-#print(internalNodes)
 
 leaves = [v for v, v in enumerate(list(range(1,n+1))) if v not in internalNodes and v not in disconnectedNodes]
-#print(leaves)
 
 
 internalNodes = list(internalNodes)
 for i in range(0,len(internalNodes)):
-    #print(internalNodes)
     xLoc = [v for v, check in enumerate(x) if check == internalNodes[i]]
     yLoc = [v for v, check in enumerate(y) if check == internalNodes[i]]
 
@@ -118,9 +114,6 @@ for i in range(0,len(internalNodes)):
                     internalNodes.remove(internalConnection[0])
                     internalConnection.remove(internalConnection[0])
             else:
-                #if internalConnection[0]==2:
-                    #print(path)
-                #print(internalConnection[0])
                 internalNodes.remove(internalConnection[0])
                 internalConnection.remove(internalConnection[0])
 
@@ -150,7 +143,7 @@ while (len(checkLeaves)!= 0):
         else:
             checkLeaves.remove(checkLeaves[0])
 
-#print(disconnectedNodes)
+
 print('Dead Leaves = '+str(deadLeaves))
 print('Dead Nodes = '+str(deadNodes))
 print('Dead Internal Nodes = '+str(deadInternalNodes))

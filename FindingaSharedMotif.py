@@ -39,18 +39,15 @@ commonSubstrings = []
 #replace DNA with coded list
 codedDNAList = []
 for i in range(0,len(dnaList)):
-    #print(dnaList[i])
     code = dnaList[i].replace('A','1')
     code = code.replace('G','2')
     code = code.replace('C','3')
     code = code.replace('T','4')
     code = list(map(float,code))
     code = np.array(code)
-    #print(code)
     codedDNAList.append(code)
 
 #x coordinate = dna1, y coordinate = dna2
-#print(codedDNAList)
 if len(codedDNAList[0])>=len(codedDNAList[1]):
     dna2 = codedDNAList[0]
     dna1 = codedDNAList[1]
@@ -123,7 +120,6 @@ if (largest > 2):
 #remove duplicates
 seen = {}
 commonSubstrings = [seen.setdefault(x, x) for x in commonSubstrings if x not in seen]
-#print(commonSubstrings)
 
 
 #test common substrings on rest of DNA strings
@@ -160,7 +156,7 @@ while (x < len(idList)):
         break
     x = x + 1
 
-#print(commonSubstrings)
+
 print(LCS)
 t1 = time.time()
 total = t1-t0
