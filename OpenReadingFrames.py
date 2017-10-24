@@ -115,7 +115,6 @@ ORF.append(revComp[2:])
 n=3
 proteins =[]
 ribosome = dnaTranslation()
-#print(ORF)
 for k in range(0, len(ORF)):
     dna = ORF[k]
     codons = [dna[i:i+n] for i in range(0, len(dna), n)]
@@ -139,7 +138,6 @@ for k in range(0, len(ORF)):
             stop = False
 
 joinedProteins = []
-#print(proteins)
 for i in range(0,len(proteins)):
     protein = ''.join(proteins[i])
     if protein not in joinedProteins:

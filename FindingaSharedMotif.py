@@ -75,7 +75,6 @@ parse = np.vstack(parse1[0:len(parse1)])
 match = np.where(parse == 1)
 for i in range(0,len(match[0])):
     check = [match[0][i],match[1][i]]
-    #print(check)
     if(check[0]!=0) and (check[1]!=0):
         if(parse[check[0]-1,check[1]-1]>0):
             parse[check[0],check[1]]=parse[check[0],check[1]]+parse[check[0]-1,check[1]-1]

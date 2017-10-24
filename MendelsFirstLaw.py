@@ -21,5 +21,4 @@ mnprob = m/t * n/(t-1) * MN * 2
 nnprob = n/t * (n-1)/(t-1) * NN
 
 totalProb = (kkprob + kmprob + knprob + mmprob + mnprob + nnprob)
-#totalProb = (k* kkprob + (k+m)*kmprob + (k+n)*knprob + m*mmprob +(m+n)*mnprob + n*nnprob)/(t/3)
 print(totalProb)

@@ -125,7 +125,5 @@ for i in range(0,len(codons)):
         else:
             aminoacids.append(aa)
 
-#print(codons)
-#print(aminoacids)
 protein = ''.join(aminoacids)
 print(protein)
